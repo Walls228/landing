@@ -1,0 +1,171 @@
+/*Внешний отступ (margin)
+Внутренний отступ (padding) */
+/* Устанавливаем отступы у всего body в 0 
+и выбираем шрифт Arial или sans-serif */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Задаем максимальную ширину контейнера, 
+выравниваем его по центру и устанавливаем отступы, 
+а также устанавливаем цвет текста */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    color: black;
+}
+
+/* Устанавливаем цвет фона и 
+выравниваем текст по центру в меню */
+.menu {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+/* Задаем отступы у списка в меню и 
+убираем маркеры у пунктов списка */
+.menu ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+/* Выравниваем пункты списка 
+горизонтально и добавляем отступ между ними */
+.menu ul li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Задаем стили для ссылок в пунктах списка */
+/* display: block - CSS свойство для задания 
+типа отображения элемента как блочного элемента. */
+.menu ul li a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: #555555;
+    font-size: 16px;
+    
+    /* Переходный эффект при наведении */
+    transition: color 0.3s;
+}
+
+/* Изменяем цвет ссылки при наведении на нее курсора */
+.menu ul li a:hover {
+    color: #ff0000;
+}
+
+/* Устанавливаем фоновое изображение для секции hero, 
+задаем высоту и центрируем содержимое */
+/* Свойство background-size: cover; используется 
+для масштабирования фонового изображения */
+/* Свойство justify-content: center; используется для 
+выравнивания элементов содержимого по главной оси контейнера по центру. */
+/* CSS свойство display: flex; используется для задания контейнера (родительского элемента) 
+как flex-контейнера. Это позволяет использовать принципы гибкой (flexbox) верстки. */
+.hero {
+    background-image: url("hero.jpg");
+    background-size: cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+
+/* Задаем размер и отступы для заголовка в секции hero */
+.hero h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Задаем размер и отступы для абзаца в секции hero */
+.hero p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+/* Задаем стили для кнопки в секции hero */
+.hero button {
+    padding: 10px 20px;
+    background-color: #ff0000;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Задаем отступы и выравнивание текста 
+по центру для секции услуг */
+.services {
+    padding: 80px 0;
+    text-align: center;
+}
+
+/* Задаем размер и отступы для заголовка в секции услуг */
+.services h2 {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+
+/* Задаем отступы для отдельной услуги в секции услуг 
+и максимальную ширину для изображения */
+.services .service {
+    margin-bottom: 40px;
+}
+
+/* Задаем размер изображения и автоматический размер по высоте */
+.services .service img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Задаем размер и отступы для заголовка услуги */
+.services .service h3 {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+/* Задаем размер для текста услуги */
+.services .service p {
+    font-size: 16px;
+}
+
+/* Задаем цвет фона и отступы для футера */
+footer {
+    background-color: #f2f2f2;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Задаем размер для текста в футере и отступы */
+footer p {
+    font-size: 14px;
+    margin: 0;
+}
+
+/* С помощью свойства `position: fixed` мы фиксируем его на странице, чтобы он всегда был видимым. 
+Затем мы задаем его положение с помощью свойств `bottom` и `right`. 
+`padding` определяет отступы внутри элемента, а `background-color` и `color` 
+устанавливают цвет фона и текста соответственно. `text-decoration: none` убирает подчеркивание ссылки, 
+а `display: none` скрывает элемент изначально. */
+
+#goTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  display: none;
+}
+
+#goTop:hover {
+  background-color: #555;
+}

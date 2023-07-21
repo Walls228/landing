@@ -1,0 +1,82 @@
+<!-- Открываем HTML документ -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Лендинг страница услуг</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+<!-- В этой функции проверяется значение вертикальной прокрутки страницы (`document.body.scrollTop` и `document.documentElement.scrollTop`). Если значение больше 20 пикселей, то якорь отображается, иначе он скрывается. -->
+<script>
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("goTop").style.display = "block";
+  } else {
+    document.getElementById("goTop").style.display = "none";
+  }
+}
+</script>
+</head>
+<body>
+    <!-- Якорь для страницы -->
+    <a href="#top" id="goTop">Наверх</a>
+    <header>
+        <!-- Секция с классом "menu" -->
+        <nav class="menu">
+            <ul>
+                <li><a href="#">Главная</a></li>
+                <li><a href="#section1">О нас</a></li>
+                <li><a href="#section2">Услуги</a></li>
+                <li><a href="#section3">Контакты</a></li>
+            </ul>
+        </nav>
+    </header>
+<!-- Секция с классом "hero" -->
+    <section class="hero">
+        <!-- Контейнер внутри секции с id "section1" -->
+        <div class="container" id="section1">
+            <!-- Заголовок с приветствием -->
+            <h1>Добро пожаловать на нашу лендинг страницу</h1>
+            <!-- Параграф с описанием и предложением услуг -->
+            <p>Мы предоставляем качественные услуги и гарантируем ваши результаты</p>
+             <!-- Кнопка "Подробнее" -->
+            <button>Подробнее</button>
+        </div>
+    </section>
+
+<!-- Секция с классом "services" -->
+    <section class="services">
+        <!-- Контейнер внутри секции с id "section2" -->
+        <div class="container" id="section2">
+            <!-- Заголовок секции "Наши услуги" -->
+            <h2>Наши услуги</h2>
+            <!-- Блок с описанием первой услуги -->
+            <div class="service">
+                <!-- Изображение первой услуги -->
+                <img src="service1.png" alt="Услуга 1">
+                <!-- Заголовок первой услуги -->
+                <h3>Услуга 1</h3>
+                <!-- Параграф с описанием первой услуги -->
+                <p>Описание услуги 1</p>
+            </div>
+            <!-- Блок с описанием второй услуги -->
+            <div class="service">
+                <!-- Изображение второй услуги -->
+                <img src="service2.jpg" alt="Услуга 2">
+                <!-- Заголовок второй услуги -->
+                <h3>Услуга 2</h3>
+                <!-- Параграф с описанием второй услуги -->
+                <p>Описание услуги 2</p>
+            </div>
+        </div>
+    </section>
+<!-- Нижняя часть страницы - подвал -->
+    <footer>
+         <!-- Контейнер внутри подвала с id "section3" -->
+        <div class="container" id="section3">
+            <!-- Параграф с копирайтом -->
+            <p>Наша компания &copy; 2023</p>
+        </div>
+    </footer>
+</body>
+</html>
